@@ -116,7 +116,7 @@ def start_trade():
     parser.add_argument(
         '--model', '-m',
         dest='model',
-        default='a2c',
+        default='ppo',
         help='choose the model you want to train',
         metavar="MODEL",
         type=str

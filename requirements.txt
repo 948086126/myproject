@@ -11,7 +11,8 @@ matplotlib
 
 # model building requirements
 gym>=0.17
-stable-baselines3[extra]==1.2.0
+stable-baselines3[extra]==2.6.0a1
+
 
 # testing requirements
 pytest

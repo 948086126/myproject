@@ -7,7 +7,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 
 sys.path.append("..")
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
-
+from stable_baselines3.common.logger import configure
 from utils import config
 from utils.env import StockLearningEnv
 from utils.models import DRL_Agent
@@ -29,7 +29,7 @@ class Trainer(object):
         self.train_dir = "train_file"
         self.data_dir = "data_file"
         self.create_train_dir()
-    
+
     def create_train_dir(self) -> None:
         """创建存储训练结果的文件夹"""
         if not os.path.exists(self.train_dir):
@@ -49,11 +49,12 @@ class Trainer(object):
                                 model_kwargs = config.__dict__["{}_PARAMS".format(self.model_name.upper())], 
                                 verbose = 0)
         model.learn(total_timesteps = self.total_timesteps, 
-                    eval_env = env_trade, 
-                    eval_freq = 500,
+                    #eval_env = env_trade,
+                    #eval_freq = 500,
                     log_interval = 1, 
                     tb_log_name = 'env_cashpenalty_highlr',
-                    n_eval_episodes = 1)
+                    #n_eval_episodes = 1
+                    )
         self.save_model(model)
     
     def get_data(self):

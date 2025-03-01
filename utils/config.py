@@ -25,12 +25,21 @@ A2C_PARAMS = {
     "ent_coef": 0.01, 
     "learning_rate": 0.0007
     }
+# PPO_PARAMS = {
+#     "n_steps": 256,
+#     "ent_coef": 0.01,
+#     "learning_rate": 0.00005,
+#     "batch_size": 256
+#     }
 PPO_PARAMS = {
-    "n_steps": 256,
-    "ent_coef": 0.01,
-    "learning_rate": 0.00005,
-    "batch_size": 256
-    }
+    "n_steps": 512,  # 增加步数
+    "ent_coef": 0.02,  # 增加熵系数
+    "learning_rate": 0.00025,  # 增加学习率
+    "batch_size": 128,  # 减小批次大小
+    "max_grad_norm": 0.5,  # 梯度裁剪
+    "clip_range_vf": 0.2,  # 值函数剪切
+    "normalize_advantage": True  # 优势函数归一化
+}
 DDPG_PARAMS = {
     "batch_size": 128, 
     "buffer_size": 50000, 
@@ -55,8 +64,8 @@ ENV_PARAMS = {
     "initial_amount": 1e6,
     "hmax": 5000, 
     "currency": '￥',
-    "buy_cost_pct": 3e-3,
-    "sell_cost_pct": 3e-3,
+    "buy_cost_pct": 0.0006,
+    "sell_cost_pct": 0.0016,
     "cache_indicator_data": True,
     "daily_information_cols": information_cols, 
     "print_verbosity": 500,
