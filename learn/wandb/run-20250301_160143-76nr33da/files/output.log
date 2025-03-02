@@ -1,0 +1,23 @@
+train_file 文件夹已存在!
+数据读取成功!
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 175, in <module>
+    start_train()
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 172, in start_train
+    total_timesteps = options.total_timesteps).train()
+                                               ^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 81, in train
+    env_train, env_trade = self.get_env(train_data, trade_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 126, in get_env
+    logger = configure(folder="logs/", format_strings=["stdout", WandbOutputFormat()])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\logger.py", line 661, in configure
+    output_formats = [make_output_format(f, folder, log_suffix) for f in format_strings]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\logger.py", line 661, in <listcomp>
+    output_formats = [make_output_format(f, folder, log_suffix) for f in format_strings]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\logger.py", line 469, in make_output_format
+    raise ValueError(f"Unknown format specified: {_format}")
+ValueError: Unknown format specified: <utils.env.WandbOutputFormat object at 0x000001E12E3C2890>

@@ -56,36 +56,51 @@ class DRL_Agent():
         self.env = env
 
     def get_model(
-        self,
-        model_name: str,
-        policy: str = "MlpPolicy",
-        policy_kwargs: dict = None,
-        model_kwargs: dict = None,
-        verbose: int = 1
+            self,
+            model_name: str,
+            policy: str = "MlpPolicy",
+            policy_kwargs: dict = None,
+            model_kwargs: dict = None,
+            verbose: int = 1,
+            device: str = "cpu"  # 添加device参数，默认使用CPU
     ) -> Any:
-        """根据超参数生成模型"""
+        """根据超参数生成模型
+
+        Args:
+            model_name: 模型名称（如'ppo', 'a2c'等）
+            policy: 策略网络类型（如'MlpPolicy', 'CnnPolicy'等）
+            policy_kwargs: 策略网络的超参数
+            model_kwargs: 模型的超参数
+            verbose: 日志输出级别
+            device: 指定设备（'cpu'或'cuda'）
+        """
         if model_name not in MODELS:
             raise NotImplementedError("NotImplementedError")
-        
+
         if model_kwargs is None:
             model_kwargs = MODEL_KWARGS[model_name]
-        
+
+        # 处理动作噪声
         if "action_noise" in model_kwargs:
             n_actions = self.env.action_space.shape[-1]
             model_kwargs["action_noise"] = NOISE[model_kwargs["action_noise"]](
                 mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions)
             )
+
+        # 打印模型超参数（调试用）
         print(model_kwargs)
 
+        # 初始化模型
         model = MODELS[model_name](
             policy=policy,
             env=self.env,
             tensorboard_log="{}/{}".format(config.TENSORBOARD_LOG_DIR, model_name),
             verbose=verbose,
             policy_kwargs=policy_kwargs,
-            **model_kwargs
+            device=device,  # 指定设备
+            ** model_kwargs
         )
-        
+
         return model
 
     def train_model(

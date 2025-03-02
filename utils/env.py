@@ -7,9 +7,43 @@ import gym
 import time
 from gym import spaces
 from numpy import floating
+from stable_baselines3.common.callbacks import BaseCallback
 
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
-from stable_baselines3.common.logger  import Logger,configure
+from stable_baselines3.common.logger  import KVWriter,Logger,configure
+import wandb
+
+
+class CustomWandbCallback(BaseCallback):
+    def __init__(self, verbose=0):
+        super(CustomWandbCallback, self).__init__(verbose)
+
+    def _on_step(self) -> bool:
+        # 记录每一步的指标
+        for info in self.locals['infos']:
+            if 'total_assets' in info:
+                wandb.log({
+                    "metrics/total_assets": info['total_assets'],
+                    "metrics/gain_loss_pct": info['gain_loss_pct'],
+                    "metrics/transactions": info['transactions'],
+                    "metrics/cash": info['cash'],
+                    "global_step": self.num_timesteps,
+                }, commit=False)
+        return True
+
+    def _on_rollout_end(self) -> None:
+        # 记录每个回合的指标
+        for done, info in zip(self.locals['dones'], self.locals['infos']):
+            if done and 'terminal_total_assets' in info:
+                wandb.log({
+                    "episode/terminal_total_assets": info['terminal_total_assets'],
+                    "episode/terminal_gain_loss_pct": info['terminal_gain_loss_pct'],
+                    "episode/total_trades": info['episode_total_trades'],
+                    "episode/episode": self.n_episodes,
+                    "episode/termination_reason": info['reason'],
+                    "global_step": self.num_timesteps,
+                })
+        super()._on_rollout_end()
 
 
 class StockLearningEnv(gym.Env):
@@ -232,8 +266,17 @@ class StockLearningEnv(gym.Env):
             self.account_information["total_assets"][-1] / self.max_total_assets
             if self.max_total_assets != 0 else 0.0
         )
+        # 记录终止时的关键指标
+        gl_pct = self.account_information["total_assets"][-1] / self.initial_amount - 1
+        info = {
+            "terminal_total_assets": self.account_information["total_assets"][-1],
+            "terminal_gain_loss_pct": gl_pct * 100,
+            "episode_total_trades": self.sum_trades,
+            "episode": self.episode,
+            "reason": reason,
+        }
 
-        return state, reward, True, {}
+        return state, reward, True, info
 
     def log_header(self) -> None:
         """Log 的列名"""
@@ -292,74 +335,98 @@ class StockLearningEnv(gym.Env):
         return float(base_cost + total_slippage + np.sum(impact_cost))
 
     def calculate_risk(self) -> dict:
-        """多维度风险评估"""
-        # 获取历史资产数据
         asset_values = np.array(self.account_information["total_assets"])
         holdings = np.array(self.holdings)
         current_prices = self.closings
 
         risk_metrics = {}
 
-        # 波动率风险
-        if len(asset_values) >= 5:
+        # ===== 波动率计算改进 =====
+        min_window = 5  # 最小计算窗口
+        if len(asset_values) > min_window:
             returns = np.diff(asset_values) / asset_values[:-1]
-            risk_metrics['volatility'] = np.std(returns) * np.sqrt(252)  # 年化波动率
+            # 使用滚动窗口+衰减系数
+            decay_factor = 0.94  # 对应RiskMetrics的lambda
+            volatility = 0
+            for r in returns[::-1]:
+                volatility = decay_factor * volatility + (1 - decay_factor) * r ** 2
+            risk_metrics['volatility'] = np.sqrt(volatility * 252)  # 年化
         else:
             risk_metrics['volatility'] = 0.3  # 默认值
 
-        # 最大回撤
-        peak = np.maximum.accumulate(asset_values)
-        trough = np.minimum.accumulate(asset_values)
-        risk_metrics['max_drawdown'] = np.nanmax((peak - trough) / peak) if len(asset_values) > 0 else 0
+        # ===== 最大回撤改进 =====
+        if len(asset_values) > 0:
+            peak = np.maximum.accumulate(asset_values)
+            trough = np.minimum.accumulate(asset_values[::-1])[::-1]  # 未来最低点
+            risk_metrics['max_drawdown'] = np.nanmax((peak - trough) / peak)
+        else:
+            risk_metrics['max_drawdown'] = 0
 
-        # 风险价值 (VaR)
-        if len(asset_values) >= 10:
-            sorted_returns = np.sort(returns)
-            var_percentile = 5  # 95% 置信度
-            risk_metrics['var'] = sorted_returns[int(len(sorted_returns) * var_percentile / 100)]
-
-        # 持仓集中度风险
+        # ===== 持仓集中度改进 =====
         position_values = holdings * current_prices
         total_position = np.sum(position_values)
-        # 确保无论如何都生成'concentration'键
-        risk_metrics['concentration'] = 0.0  # 默认值
-        if total_position > 0:
+        if total_position > 1e-6:  # 有效持仓时才计算
             herfindahl = np.sum((position_values / total_position) ** 2)
-            risk_metrics['concentration'] = herfindahl * 100  # 赫芬达尔指数
+            risk_metrics['concentration'] = herfindahl * 100
+        else:
+            risk_metrics['concentration'] = 0  # 零持仓时无风险
+
+        # ===== 流动性风险评估 =====
+        avg_volume = np.mean([v for v in self.get_date_vector(
+            self.date_index, cols=["volume_20_sma"]
+        ) if v > 0])
+        risk_metrics['liquidity_risk'] = np.log1p(total_position / (avg_volume + 1e-6))
 
         return risk_metrics
 
-
     def get_reward(self) -> float:
-        """多因子复合奖励函数"""
         current_assets = self.account_information["total_assets"][-1]
         risk_metrics = self.calculate_risk()
 
-        # 基础收益率
-        return_pct = current_assets / self.initial_amount - 1
+        # ===== 核心改进点 =====
+        # 1. 动态基准收益率（考虑存活偏差）
+        alive_days = len(self.account_information["total_assets"])
+        market_benchmark = (1.08 ** (alive_days / 252) - 1)  # 年化8%作为基准
 
-        # 风险调整收益
-        sharpe_ratio = return_pct / (risk_metrics['volatility'] + 1e-6)
-        sortino_ratio = return_pct / (risk_metrics['max_drawdown'] + 1e-6)
+        # 2. 收益计算（相对基准）
+        excess_return = (current_assets / self.initial_amount - 1) - market_benchmark
 
-        # 策略熵（衡量策略多样性）
-        position_weights = np.array(self.holdings) / (np.sum(np.abs(self.holdings)) + 1e-6)
+        # 3. 风险调整（改进夏普计算）
+        volatility = np.clip(risk_metrics['volatility'], 0.15, 0.6)  # 限制波动率范围
+        sharpe_ratio = excess_return / (volatility + 1e-6)
+
+        # 4. 持仓健康度（考虑零持仓情况）
+        holdings = np.array(self.holdings) + 1e-6  # 防止零除
+        position_weights = holdings / (np.sum(np.abs(holdings)) + 1e-6)
         strategy_entropy = -np.sum(position_weights * np.log(position_weights + 1e-6))
 
-        # 动态权重调整
-        market_volatility_factor = 1 + np.tanh(risk_metrics['volatility'] * 5)  # 波动率敏感系数
+        # 5. 交易频率惩罚（抑制无效交易）
+        trade_frequency = len(self.transaction_memory) / (self.current_step + 1)
+        trade_penalty = 0.05 * np.tanh(trade_frequency / 0.2)  # 柔性惩罚
 
-        # 复合奖励计算
+        # ===== 复合奖励 =====
         reward = (
-                0.6 * sharpe_ratio * market_volatility_factor +
-                0.3 * sortino_ratio +
-                0.1 * strategy_entropy -
-                0.05 * risk_metrics['concentration'] -
-                0.02 * self.calculate_transaction_cost() / current_assets
+                0.5 * sharpe_ratio +
+                0.3 * strategy_entropy -
+                0.1 * risk_metrics['concentration'] -
+                0.05 * self.calculate_transaction_cost() / current_assets -
+                trade_penalty
         )
 
-        # 边界处理
-        return np.clip(reward, -10, 10)  # 限制奖励范围避免梯度爆炸
+        # ===== 边界处理 =====
+        clipped_reward = np.clip(reward, -5, 5)
+
+        # 记录分量到字典
+        self.reward_components = {
+            "total": clipped_reward,
+            "sharpe": 0.5 * sharpe_ratio,
+            "entropy": 0.3 * strategy_entropy,
+            "concentration": -0.1 * risk_metrics['concentration'],
+            "cost": -0.05 * self.calculate_transaction_cost() / current_assets,
+            "trade_penalty": -trade_penalty
+        }
+
+        return clipped_reward
     # action 给出动作  乘以   self.hmax 来决定买多少
     def get_transactions(self, actions: np.ndarray) -> np.ndarray:
         """获取实际交易的股数"""
@@ -432,7 +499,19 @@ class StockLearningEnv(gym.Env):
                 [coh] + list(holdings_updated) + self.get_date_vector(self.date_index)
             )
             self.state_memory.append(state)
-            return state, reward, False, {}
+
+            # 在正常step中返回的info添加指标
+            current_assets = begin_cash + assert_value
+            gl_pct = (current_assets / self.initial_amount) - 1
+            info = {
+                "total_assets": current_assets,
+                "gain_loss_pct": gl_pct * 100,
+                "transactions": np.sum(np.abs(transactions)),
+                "cash": coh,
+                "step": self.current_step,
+            }
+
+            return state, reward, False, info
 
     def get_sb_env(self) -> Tuple[Any, Any]:
         def get_self():

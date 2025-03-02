@@ -1,0 +1,19 @@
+{"time":"2025-03-01T16:13:07.9061332+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"C:\\Users\\Administrator\\PycharmProjects\\myproject\\learn\\wandb\\run-20250301_161307-2zdel2nc\\logs\\debug-core.log"}
+{"time":"2025-03-01T16:13:08.0255899+08:00","level":"INFO","msg":"created new stream","id":"2zdel2nc"}
+{"time":"2025-03-01T16:13:08.0261103+08:00","level":"INFO","msg":"stream: started","id":"2zdel2nc"}
+{"time":"2025-03-01T16:13:08.0261103+08:00","level":"INFO","msg":"handler: started","stream_id":"2zdel2nc"}
+{"time":"2025-03-01T16:13:08.0261103+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"2zdel2nc"}
+{"time":"2025-03-01T16:13:08.0261103+08:00","level":"INFO","msg":"sender: started","stream_id":"2zdel2nc"}
+{"time":"2025-03-01T16:13:08.6410233+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-01T16:14:29.3955267+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/2zdel2nc/file_stream\": read tcp 127.0.0.1:59317->127.0.0.1:60540: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-03-01T16:16:44.4378326+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/2zdel2nc/file_stream\": EOF"}
+{"time":"2025-03-01T16:19:29.6775002+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/2zdel2nc/file_stream\": unexpected EOF"}
+{"time":"2025-03-01T16:22:44.439193+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/2zdel2nc/file_stream\": EOF"}
+{"time":"2025-03-01T16:23:26.8097871+08:00","level":"INFO","msg":"stream: closing","id":"2zdel2nc"}
+{"time":"2025-03-01T16:23:26.8097871+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-01T16:23:26.8097871+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-01T16:23:30.8426689+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-01T16:23:32.2737321+08:00","level":"INFO","msg":"handler: closed","stream_id":"2zdel2nc"}
+{"time":"2025-03-01T16:23:32.2737321+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"2zdel2nc"}
+{"time":"2025-03-01T16:23:32.2737321+08:00","level":"INFO","msg":"sender: closed","stream_id":"2zdel2nc"}
+{"time":"2025-03-01T16:23:32.2737321+08:00","level":"INFO","msg":"stream: closed","id":"2zdel2nc"}

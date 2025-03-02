@@ -1,0 +1,17 @@
+{"time":"2025-03-01T16:29:04.4139472+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"C:\\Users\\Administrator\\PycharmProjects\\myproject\\learn\\wandb\\run-20250301_162904-geuq72ep\\logs\\debug-core.log"}
+{"time":"2025-03-01T16:29:04.5331171+08:00","level":"INFO","msg":"created new stream","id":"geuq72ep"}
+{"time":"2025-03-01T16:29:04.5331725+08:00","level":"INFO","msg":"stream: started","id":"geuq72ep"}
+{"time":"2025-03-01T16:29:04.5331725+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"geuq72ep"}
+{"time":"2025-03-01T16:29:04.5331725+08:00","level":"INFO","msg":"sender: started","stream_id":"geuq72ep"}
+{"time":"2025-03-01T16:29:04.5331725+08:00","level":"INFO","msg":"handler: started","stream_id":"geuq72ep"}
+{"time":"2025-03-01T16:29:05.1195489+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-01T16:29:41.0578798+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/geuq72ep/file_stream\": read tcp 127.0.0.1:60519->127.0.0.1:60540: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-03-01T16:30:40.8111657+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/geuq72ep/file_stream\": unexpected EOF"}
+{"time":"2025-03-01T16:33:15.6811374+08:00","level":"INFO","msg":"stream: closing","id":"geuq72ep"}
+{"time":"2025-03-01T16:33:15.6811374+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-01T16:33:15.6811374+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-01T16:33:17.7840526+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-01T16:33:19.7026946+08:00","level":"INFO","msg":"handler: closed","stream_id":"geuq72ep"}
+{"time":"2025-03-01T16:33:19.7026946+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"geuq72ep"}
+{"time":"2025-03-01T16:33:19.7026946+08:00","level":"INFO","msg":"sender: closed","stream_id":"geuq72ep"}
+{"time":"2025-03-01T16:33:19.7026946+08:00","level":"INFO","msg":"stream: closed","id":"geuq72ep"}

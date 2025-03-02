@@ -1,0 +1,166 @@
+train_file 文件夹创建成功!
+数据不存在，开始下载
+data_file 文件夹创建成功!
+   --- 开始下载 ----
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+   下载进度 : 20.0%
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+   下载进度 : 40.0%
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+   下载进度 : 60.0%
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+   下载进度 : 80.0%
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+   下载进度 : 100.0%
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\tushare\pro\data_pro.py:130: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  data['adj_factor'] = data['adj_factor'].fillna(method='bfill')
+   --- 下载完成 ----
+DataFrame 的大小:  (151172, 8)
+数据下载的时间区间为：20090101 至 20240101
+下载的股票列表为:
+['600000.SH', '600009.SH', '600016.SH', '600028.SH', '600030.SH', '600031.SH', '600036.SH', '600048.SH', '600050.SH', '600104.SH', '600196.SH', '600276.SH', '600309.SH', '600519.SH', '600547.SH', '600570.SH', '600585.SH', '600588.SH', '600690.SH', '600703.SH', '600745.SH', '600837.SH', '600887.SH', '600918.SH', '601012.SH', '601066.SH', '601088.SH', '601138.SH', '601166.SH', '601186.SH', '601211.SH', '601236.SH', '601288.SH', '601318.SH', '601319.SH', '601336.SH', '601398.SH', '601601.SH', '601628.SH', '601668.SH', '601688.SH', '601816.SH', '601818.SH', '601857.SH', '601888.SH', '603160.SH', '603259.SH', '603288.SH', '603501.SH', '603986.SH']
+成功添加技术指标
+对当前时间段未上市的公司的所有行置零
+技术指标列表:
+['boll_ub', 'boll_lb', 'rsi_20', 'close_20_sma', 'close_60_sma', 'close_120_sma', 'macd', 'volume_20_sma', 'volume_60_sma', 'volume_120_sma']
+技术指标数: 10个
+         date        tic  open  ...        amount    change  daily_variance
+0  2009-01-05  600000.SH  2.38  ...  1.217605e+06  0.016529        0.033058
+1  2009-01-05  600009.SH  9.47  ...  4.996422e+05  0.012513        0.021898
+2  2009-01-05  600016.SH  1.40  ...  1.336313e+06  0.007092        0.021277
+3  2009-01-05  600028.SH  2.55  ...  9.352119e+05  0.015444        0.019305
+4  2009-01-05  600030.SH  8.19  ...  6.912178e+06  0.029621        0.042654
+
+[5 rows x 21 columns]
+训练数据的范围：2009-01-01 至 2023-01-01
+测试数据的范围：2023-01-01 至 2024-01-01
+训练数据的长度: 170150,测试数据的长度:12100
+训练集数据 : 测试集数据: 14.1 : 1
+train_data.head():
+         date        tic  open  ...        amount    change  daily_variance
+0  2009-01-05  600000.SH  2.38  ...  1.217605e+06  0.016529        0.033058
+0  2009-01-05  600009.SH  9.47  ...  4.996422e+05  0.012513        0.021898
+0  2009-01-05  600016.SH  1.40  ...  1.336313e+06  0.007092        0.021277
+0  2009-01-05  600028.SH  2.55  ...  9.352119e+05  0.015444        0.019305
+0  2009-01-05  600030.SH  8.19  ...  6.912178e+06  0.029621        0.042654
+
+[5 rows x 21 columns]
+trade_data.head():
+         date        tic   open  ...        amount    change  daily_variance
+0  2023-01-03  600000.SH   6.96  ...  1.791762e+06 -0.005780        0.015896
+0  2023-01-03  600009.SH  57.56  ...  1.282367e+07 -0.023289        0.026844
+0  2023-01-03  600016.SH   3.27  ...  1.906368e+06 -0.003067        0.009202
+0  2023-01-03  600028.SH   4.15  ...  3.564377e+06  0.004796        0.011990
+0  2023-01-03  600030.SH  19.37  ...  1.350548e+07  0.006157        0.030272
+
+[5 rows x 21 columns]
+数据读取成功!
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 146, in <module>
+    start_train()
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 143, in start_train
+    total_timesteps = options.total_timesteps).train()
+                                               ^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 54, in train
+    env_train, env_trade = self.get_env(train_data, trade_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 97, in get_env
+    logger = configure(["stdout", WandbOutputFormat()])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\logger.py", line 653, in configure
+    assert isinstance(folder, str)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

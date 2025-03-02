@@ -1,0 +1,33 @@
+train_file 文件夹已存在!
+数据读取成功!
+加载数据缓存
+数据缓存成功!
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\vec_env\patch_gym.py:49: UserWarning: You provided an OpenAI Gym environment. We strongly recommend transitioning to Gymnasium environments. Stable-Baselines3 is automatically wrapping your environments in a compatibility layer, which could potentially cause issues.
+  warnings.warn(
+加载数据缓存
+数据缓存成功!
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\vec_env\patch_gym.py:49: UserWarning: You provided an OpenAI Gym environment. We strongly recommend transitioning to Gymnasium environments. Stable-Baselines3 is automatically wrapping your environments in a compatibility layer, which could potentially cause issues.
+  warnings.warn(
+{'n_steps': 2048, 'ent_coef': 0.02, 'learning_rate': 0.0003, 'batch_size': 64, 'max_grad_norm': 0.5, 'clip_range_vf': 0.2, 'normalize_advantage': True}
+EPISODE|STEPS|TERMINAL_REASON|CASH           |TOT_ASSETS     |TERMINAL_REWARD|GAINLOSS_PCT|RETREAT_PROPORTION
+   1| 499|update         |￥7,144         |￥896,887       |-39.56929%|-10.31130%|-10.31%
+   1| 999|update         |￥54,281        |￥1,406,390     |37.21877% |40.63904% |0.00%
+   1|1499|update         |￥29,617        |￥2,905,650     |249.42654%|190.56500%|0.00%
+   1|1879|Last Date      |￥59,303        |￥1,858,736     |25.23651% |85.87362% |0.00%
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 170, in <module>
+    start_train()
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 167, in start_train
+    total_timesteps = options.total_timesteps).train()
+                                               ^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 93, in train
+    model.learn(total_timesteps = self.total_timesteps,
+  File "C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 334, in learn
+    self._dump_logs(iteration)
+  File "C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 289, in _dump_logs
+    if len(self.ep_info_buffer) > 0 and len(self.ep_info_buffer[0]) > 0:
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'int' has no len()

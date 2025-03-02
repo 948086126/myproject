@@ -1,0 +1,20 @@
+train_file 文件夹已存在!
+数据读取成功!
+加载数据缓存
+数据缓存成功!
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\vec_env\patch_gym.py:49: UserWarning: You provided an OpenAI Gym environment. We strongly recommend transitioning to Gymnasium environments. Stable-Baselines3 is automatically wrapping your environments in a compatibility layer, which could potentially cause issues.
+  warnings.warn(
+加载数据缓存
+数据缓存成功!
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\vec_env\patch_gym.py:49: UserWarning: You provided an OpenAI Gym environment. We strongly recommend transitioning to Gymnasium environments. Stable-Baselines3 is automatically wrapping your environments in a compatibility layer, which could potentially cause issues.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 171, in <module>
+    start_train()
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 168, in start_train
+    total_timesteps = options.total_timesteps).train()
+                                               ^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 85, in train
+    logger = configure(["stdout", WandbOutputFormat()])
+                                  ^^^^^^^^^^^^^^^^^
+NameError: name 'WandbOutputFormat' is not defined

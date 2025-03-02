@@ -1,0 +1,16 @@
+train_file 文件夹已存在!
+数据读取成功!
+加载数据缓存
+数据缓存成功!
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\vec_env\patch_gym.py:49: UserWarning: You provided an OpenAI Gym environment. We strongly recommend transitioning to Gymnasium environments. Stable-Baselines3 is automatically wrapping your environments in a compatibility layer, which could potentially cause issues.
+  warnings.warn(
+加载数据缓存
+数据缓存成功!
+C:\ProgramData\anaconda3\envs\py_env\Lib\site-packages\stable_baselines3\common\vec_env\patch_gym.py:49: UserWarning: You provided an OpenAI Gym environment. We strongly recommend transitioning to Gymnasium environments. Stable-Baselines3 is automatically wrapping your environments in a compatibility layer, which could potentially cause issues.
+  warnings.warn(
+{'n_steps': 2048, 'ent_coef': 0.02, 'learning_rate': 0.0003, 'batch_size': 64, 'max_grad_norm': 0.5, 'clip_range_vf': 0.2, 'normalize_advantage': True}
+EPISODE|STEPS|TERMINAL_REASON|CASH           |TOT_ASSETS     |TERMINAL_REWARD|GAINLOSS_PCT|RETREAT_PROPORTION
+   1| 499|update         |￥31,773        |￥1,486,926     |114.53718%|48.69261% |0.00%
+   1| 999|update         |￥130,226       |￥2,357,466     |328.88177%|135.74658%|0.00%
+   1|1499|update         |￥25,070        |￥3,349,825     |500.00000%|234.98251%|0.00%
+   1|1999|update         |￥35,320        |￥6,974,703     |500.00000%|597.47028%|0.00%

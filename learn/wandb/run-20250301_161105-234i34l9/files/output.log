@@ -1,0 +1,15 @@
+train_file 文件夹已存在!
+数据读取成功!
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 174, in <module>
+    start_train()
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 171, in start_train
+    total_timesteps = options.total_timesteps).train()
+                                               ^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 81, in train
+    env_train, env_trade = self.get_env(train_data, trade_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\PycharmProjects\myproject\learn\trainer.py", line 125, in get_env
+    logger = configure(folder="logs/", format_strings=["stdout", WandbOutputFormat()])
+                                                                 ^^^^^^^^^^^^^^^^^
+NameError: name 'WandbOutputFormat' is not defined

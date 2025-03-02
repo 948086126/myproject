@@ -1,0 +1,17 @@
+{"time":"2025-03-01T16:39:22.8773537+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"C:\\Users\\Administrator\\PycharmProjects\\myproject\\learn\\wandb\\run-20250301_163922-bif13uud\\logs\\debug-core.log"}
+{"time":"2025-03-01T16:39:22.9976171+08:00","level":"INFO","msg":"created new stream","id":"bif13uud"}
+{"time":"2025-03-01T16:39:22.9976171+08:00","level":"INFO","msg":"stream: started","id":"bif13uud"}
+{"time":"2025-03-01T16:39:22.9976171+08:00","level":"INFO","msg":"handler: started","stream_id":"bif13uud"}
+{"time":"2025-03-01T16:39:22.9976171+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"bif13uud"}
+{"time":"2025-03-01T16:39:22.9976171+08:00","level":"INFO","msg":"sender: started","stream_id":"bif13uud"}
+{"time":"2025-03-01T16:39:25.5904674+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-01T16:44:49.4479156+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/bif13uud/file_stream\": EOF"}
+{"time":"2025-03-01T16:52:16.3786835+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/948086126-zzzz/stock_trading/bif13uud/file_stream\": read tcp 127.0.0.1:52199->127.0.0.1:60540: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-03-01T16:59:46.9234509+08:00","level":"INFO","msg":"stream: closing","id":"bif13uud"}
+{"time":"2025-03-01T16:59:46.9234509+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-01T16:59:46.9234509+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-01T16:59:48.3765519+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-01T16:59:48.8596446+08:00","level":"INFO","msg":"handler: closed","stream_id":"bif13uud"}
+{"time":"2025-03-01T16:59:48.8596446+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bif13uud"}
+{"time":"2025-03-01T16:59:48.8596446+08:00","level":"INFO","msg":"sender: closed","stream_id":"bif13uud"}
+{"time":"2025-03-01T16:59:48.8596446+08:00","level":"INFO","msg":"stream: closed","id":"bif13uud"}
